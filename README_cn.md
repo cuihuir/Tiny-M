@@ -4,6 +4,8 @@
 
 一款基于 [Voron V0](https://github.com/VoronDesign/Voron-0) 的紧凑型 CoreXY 3D 打印机，成型体积 150x150x150mm。
 
+<img src="images/tiny-m_v4.jpg" width="400">
+
 > **致敬原作者 gsl12**
 >
 > Tiny-M 由 gsl12 设计并在开源社区发布，作者在 Voron V0 基础上做了大量优化改进。遗憾的是，2023 年 8 月作者因健康原因停止了项目维护，V5 版本永久停留在了 beta 阶段。

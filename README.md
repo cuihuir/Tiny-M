@@ -4,6 +4,8 @@
 
 A compact CoreXY 3D printer based on [Voron V0](https://github.com/VoronDesign/Voron-0), with a build volume of 150x150x150mm.
 
+<img src="images/tiny-m_v4.jpg" width="400">
+
 > **Tribute to gsl12**
 >
 > Tiny-M was designed and released as open source by gsl12, who made many optimizations on the Voron V0 platform. Unfortunately, due to health reasons, development stopped in August 2023. The V5 release permanently remains in beta.
