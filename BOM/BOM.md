@@ -10,12 +10,20 @@
 
 ## 1. Aluminum Extrusion
 
-| Item | Spec | Qty | Notes |
-|------|------|-----|-------|
-| 2020 Extrusion | 300mm | 4 | Four vertical pillars |
-| 2020 Extrusion | 260mm | 10 | Top left/right x2, middle left/right x2, bottom left/right x2, horizontal x3, X-axis x1 |
-| 2020 Extrusion | 250mm | 2 | Z-axis |
-| 2020 Extrusion | 130mm | 3 | Heatbed |
+| ID | JLC Model | Spec | Qty | Notes |
+|----|-----------|------|-----|-------|
+| 300-1 | TXCJ-H7-2020D-L300-SC-DA-LC-Z5-A10-RC-Z5-A60 | 300mm | 2 | Rear pillars |
+| 300-2 | TXCJ-H7-2020D-L300-SC-DA-LC-Z5-A10-RC-Z5-A60-RE-Z5-A60 | 300mm | 2 | Front pillars (extra vertical hole at 60mm) |
+| 250 | TXCJ-H7-2020D-L250-DA-LC-Z5-A10-RC-Z5-A10 | 250mm | 2 | Z-axis |
+| 260-1 | TXCJ-H7-2020D-L260-DA | 260mm | 2 | Top left/right |
+| 260-2 | TXCJ-H7-2020D-L260-SC-DA-LC-Z5-A36 | 260mm | 2 | Middle left/right |
+| 260-3 | TXCJ-H7-2020D-L260-SC-DA-LC-Z5-A36 | 260mm | 2 | Bottom left/right |
+| 260-4 | TXCJ-H7-2020D-L260-SC-DA | 260mm | 3 | Horizontal cross |
+| 260-5 | TXCJ-H7-2020D-L260-DA | 260mm | 1 | X-axis |
+| 130-1 | TXCJ-H7-2020D-L130-SC-DA-LC-Z5-A40-RC-Z5-A40 | 130mm | 1 | Heatbed (drilled 40mm) |
+| 130-2 | TXCJ-H7-2020D-L130-LA | 130mm | 2 | Heatbed |
+
+> JLC order file: `BOM/BOM-Frame-JLCFA.xlsx`
 
 ## 2. Linear Rails & Carriages
 
