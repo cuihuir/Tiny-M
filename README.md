@@ -12,6 +12,29 @@ A compact CoreXY 3D printer based on [Voron V0](https://github.com/VoronDesign/V
 >
 > This repository is forked from [gsl12/Tiny-M](https://github.com/gsl12/Tiny-M) to carry on the open-source spirit, continuing maintenance and improvements.
 
+## Build Progress
+
+| Phase | Status | Description |
+|-------|--------|-------------|
+| BOM & Sourcing | **In Progress** | Frame extrusion BOM completed, order placed via JLC (嘉立创) |
+| Frame Assembly | Pending | Awaiting extrusion delivery |
+| Motion System | Pending | Linear rails, motors, belts |
+| Hotend & Extruder | Pending | |
+| Heatbed | Pending | |
+| Electronics | Pending | |
+| Enclosure | Pending | |
+| Software Config | Pending | Klipper setup & tuning |
+
+<details>
+<summary><strong>Recent Updates</strong></summary>
+
+- **BOM restructured** - Converted gsl12 original and XiaoChen DIY V2.2 BOMs to bilingual Markdown, created our own active BOM
+- **Frame BOM ordered** - 19 pieces of 2020 aluminum extrusion customized via JLC (TXCJ), with drilling and tapping per spec. See [BOM-Frame-JLCFA](BOM/BOM-Frame-JLCFA.md)
+- **JLC tooling** - Created `tools/jlc_reorder.py` to auto-reorder extrusion processing codes to JLC standard format
+- **Bilingual docs** - All documentation available in English (`*.md`) and Chinese (`*_cn.md`)
+
+</details>
+
 ## References
 
 | Project | Description |
