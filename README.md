@@ -1,143 +1,106 @@
-**[中文版 / Chinese](README_cn.md)**
+<div align="center">
+
+[English](README.md) | [中文版](README_cn.md)
 
 # Tiny-M
 
-A compact CoreXY 3D printer based on [Voron V0](https://github.com/VoronDesign/Voron-0), with a build volume of 150x150x150mm.
+A compact CoreXY 3D printer based on [Voron V0](https://github.com/VoronDesign/Voron-0)
 
-<img src="images/tiny-m_v4.jpg" width="400">
+**Build Volume** `150×150×150mm` &nbsp;|&nbsp; **Motion** `CoreXY` &nbsp;|&nbsp; **Firmware** `Klipper` &nbsp;|&nbsp; **Power** `24V`
 
-> **Tribute to gsl12**
->
-> Tiny-M was designed and released as open source by gsl12, who made many optimizations on the Voron V0 platform. Unfortunately, due to health reasons, development stopped in August 2023. The V5 release permanently remains in beta.
->
-> This repository is forked from [gsl12/Tiny-M](https://github.com/gsl12/Tiny-M) to carry on the open-source spirit, continuing maintenance and improvements.
+<img src="images/tiny-m_v4.jpg" width="460">
 
-## Build Progress
+</div>
 
-| Phase | Status | Description |
-|-------|--------|-------------|
-| BOM & Sourcing | **In Progress** | Frame extrusion BOM completed, order placed via JLC (嘉立创) |
-| Frame Assembly | Pending | Awaiting extrusion delivery |
-| Motion System | Pending | Linear rails, motors, belts |
-| Hotend & Extruder | Pending | |
-| Heatbed | Pending | |
-| Electronics | Pending | |
-| Enclosure | Pending | |
-| Software Config | Pending | Klipper setup & tuning |
+---
+
+> **Tribute to gsl12** — Tiny-M was designed by gsl12 with many optimizations on the Voron V0 platform. Due to health reasons, development stopped in August 2023. V5 permanently remains in beta. This repo continues the open-source spirit.
+
+## 🛠 Build Progress
+
+<table>
+<tr><th>Phase</th><th>Status</th><th>Details</th></tr>
+<tr><td>BOM & Sourcing</td><td>🔄 <strong>In Progress</strong></td><td>Frame extrusion BOM completed, 19 pcs ordered via JLC</td></tr>
+<tr><td>Frame Assembly</td><td>⬜ Pending</td><td>Awaiting extrusion delivery</td></tr>
+<tr><td>Motion System</td><td>⬜ Pending</td><td>Linear rails, motors, belts</td></tr>
+<tr><td>Hotend & Extruder</td><td>⬜ Pending</td><td></td></tr>
+<tr><td>Heatbed</td><td>⬜ Pending</td><td></td></tr>
+<tr><td>Electronics</td><td>⬜ Pending</td><td></td></tr>
+<tr><td>Enclosure</td><td>⬜ Pending</td><td></td></tr>
+<tr><td>Software Config</td><td>⬜ Pending</td><td>Klipper setup & tuning</td></tr>
+</table>
 
 <details>
-<summary><strong>Recent Updates</strong></summary>
+<summary><strong>📝 Recent Updates</strong></summary>
 
-- **BOM restructured** - Converted gsl12 original and XiaoChen DIY V2.2 BOMs to bilingual Markdown, created our own active BOM
-- **Frame BOM ordered** - 19 pieces of 2020 aluminum extrusion customized via JLC (TXCJ), with drilling and tapping per spec. See [BOM-Frame-JLCFA](BOM/BOM-Frame-JLCFA.md)
-- **JLC tooling** - Created `tools/jlc_reorder.py` to auto-reorder extrusion processing codes to JLC standard format
-- **Bilingual docs** - All documentation available in English (`*.md`) and Chinese (`*_cn.md`)
+- **BOM restructured** — Converted gsl12 & XiaoChen DIY V2.2 BOMs to bilingual Markdown ([BOM/](BOM/))
+- **Frame ordered** — 19 pcs of 2020 extrusion customized via JLC (TXCJ). See [BOM-Frame-JLCFA](BOM/BOM-Frame-JLCFA.md)
+- **JLC tooling** — [`tools/jlc_reorder.py`](tools/jlc_reorder.py) auto-reorders processing codes to JLC format
+- **Bilingual docs** — All docs in English (`*.md`) and Chinese (`*_cn.md`)
 
 </details>
 
-## References
+---
+
+## 📦 References
 
 | Project | Description |
 |---------|-------------|
-| [gsl12/Tiny-M](https://github.com/gsl12/Tiny-M) | Original author's repo, current version V4 |
+| [gsl12/Tiny-M](https://github.com/gsl12/Tiny-M) | Original author, V4 |
 | [gsl12/Tiny-M-V5-beta](https://github.com/gsl12/Tiny-M-V5-beta) | V5 beta (unfinished) |
-| [pangqc/voron-tiny-m](https://gitee.com/pangqc/voron-tiny-m) | XiaoChen DIY modified version, with complete BOM, enclosure solution, and assembly tutorials |
+| [pangqc/voron-tiny-m](https://gitee.com/pangqc/voron-tiny-m) | XiaoChen DIY mod — complete BOM, enclosure, tutorials |
 
-## About This Project
+## ⚙️ Hardware Specs
 
-This is a replica and maintenance project with the following goals:
+| | |
+|---|---|
+| **Frame** | 2020 aluminum extrusion |
+| **X-axis** | 1× MGN12H 200mm |
+| **Y-axis** | 2× MGN9H 200mm |
+| **Z-axis** | 2× MGN12H 200mm |
+| **Motors** | NEMA 17 |
 
-- Organize and update the BOM (Bill of Materials) for easier sourcing
-- Reference XiaoChen DIY's modifications (optical endstop, enclosure, direct drive extruder, etc.) and optimize based on actual build experience
-- Supplement and improve assembly documentation
-- Continuously update improvements made during the build process
+## 🔧 Extruder Options
 
-## Hardware Specifications
+- [CroXY Sailfin](https://github.com/CroXY3D/Sailfin-Extruder) — Direct drive
+- [Annex Sherpa Mini](https://github.com/Annex-Engineering/Sherpa_Mini-Extruder) — Direct drive
+- [Bondtech LGX Lite](https://www.bondtech.se/product/lgx-lite-extruder-custom/) — Direct drive
+- E3D V6 Bowden hotend
 
-- Build volume: 150 x 150 x 150 mm
-- Motion system: CoreXY
-- Frame: 2020 aluminum extrusion
-- X-axis rail: 1x 200mm MGN12H
-- Y-axis rails: 2x 200mm MGN9H
-- Z-axis rails: 2x 200mm MGN12H
-- Stepper motors: NEMA 17
-- Power supply: 24V
-- Firmware: Klipper
-
-## Extruder Options
-
-Both Bowden and direct drive configurations are supported:
-
-- [CroXY Sailfin](https://github.com/CroXY3D/Sailfin-Extruder) - Direct drive
-- [Annex Engineering Sherpa Mini](https://github.com/Annex-Engineering/Sherpa_Mini-Extruder) - Direct drive
-- [Bondtech LGX Lite](https://www.bondtech.se/product/lgx-lite-extruder-custom/) - Direct drive
-- E3D V6 remote hotend - Bowden setup
-
-## Controller Boards
-
-- FYSETC Cheetah V1.1b (TMC2209)
-- SKR Mini E3 + TMC2209
-- MKS Robin E3D (XiaoChen DIY variant)
-
-## Directory Structure
+## 📂 Directory Structure
 
 ```
-├── BOM/              # Bill of Materials
+├── BOM/              # Bill of Materials & sourcing
 ├── CAD/              # CAD source files
 ├── DXFs/             # Machining drawings
-├── STLs/             # Printable STL files
-├── images/           # Images
-├── klipper_firmware/ # Klipper firmware config
+├── STLs/             # Printable parts
+├── klipper_firmware/  # Klipper config
 ├── slicer/           # Slicer profiles
-└── usermods/         # User modifications
+├── tools/            # Utility scripts
+└── usermods/         # Community modifications
 ```
 
-## Print Settings
+## 🖨 Print Settings (ABS/ABS+)
 
-Structural parts are recommended to be printed in ABS or ABS+:
+| Setting | Value |
+|---------|-------|
+| Nozzle | 0.4mm |
+| Extrusion width | 0.48mm |
+| Layer height | 0.2–0.3mm |
+| Top/bottom layers | 5 |
+| Walls | 4 |
+| Infill | 40% (triangular) |
 
-- Nozzle: 0.4mm
-- Extrusion width: 0.48mm
-- Layer height: 0.2 - 0.3mm
-- Top/bottom layers: 5
-- Walls: 4
-- Infill: 40% (triangular recommended)
+## 🔗 Community
 
-Skirt parts can be printed in other filament types.
-
-## XY Joint Versions
-
-There are 3 versions of the XY joints. V4 is recommended:
-
-- **V2** - Uses 2GT 20T pulleys (no set screw hub), requires grinding flanges to fit
-- **V3** - Uses 2GT 20T toothed idlers, no M5 nuts
-- **V4** - Split into 3 parts, removes one M5 screw for better alignment, optimized belt path, more rigid
-
-## User Modifications
-
-See the [usermods](https://github.com/gsl12/Tiny-M/tree/master/usermods) directory, including:
-
-- Belted Z Mod
-- 190mm Prusa Mini bed plate mod
-- All-metal bed undercarriage
-- 5mm shoulder screw mod
-- 5mm dowel pin mod
-- Rear cable guide
-- Tophat mod
-
-## Community
-
-- [CroXY Discord](https://discord.gg/tmZkjWs) - Tiny-M channel
+- [CroXY Discord](https://discord.gg/tmZkjWs) — Tiny-M channel
 - [Mark Hoy's Build Log](https://github.com/mark-hoy/tiny-m-build)
-- [XiaoChen DIY on Bilibili](https://space.bilibili.com/437455484) - Assembly video tutorials
+- [小辰DIY on Bilibili](https://space.bilibili.com/437455484)
 
-## Acknowledgements
+## 💎 Acknowledgements
 
-- **gsl12** - Original creator of Tiny-M
-- **Voron Design** - Voron V0 original design
-- **XiaoChen DIY (pangqc)** - Complete BOM, enclosure solution, and Chinese assembly documentation
-- All Tiny-M community contributors
+**gsl12** · **Voron Design** · **XiaoChen DIY (pangqc)** · All Tiny-M contributors
 
-## License
+## 📄 License
 
 This project follows the original repository's open source license.
