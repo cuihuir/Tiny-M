@@ -10,18 +10,18 @@
 
 ## 1. Aluminum Extrusion
 
-| ID | JLC Model | Spec | Qty | Notes |
-|----|-----------|------|-----|-------|
-| 300-1 | TXCJ-H7-2020D-L300-SC-DA-LC-Z5-A10-RC-Z5-A60 | 300mm | 2 | Rear pillars |
-| 300-2 | TXCJ-H7-2020D-L300-SC-DA-LC-Z5-A10-RC-Z5-A60-RE-Z5-A60 | 300mm | 2 | Front pillars (extra vertical hole at 60mm) |
-| 250 | TXCJ-H7-2020D-L250-DA-LC-Z5-A10-RC-Z5-A10 | 250mm | 2 | Z-axis |
-| 260-1 | TXCJ-H7-2020D-L260-DA | 260mm | 2 | Top left/right |
-| 260-2 | TXCJ-H7-2020D-L260-SC-DA-LC-Z5-A36 | 260mm | 2 | Middle left/right |
-| 260-3 | TXCJ-H7-2020D-L260-SC-DA-LC-Z5-A36 | 260mm | 2 | Bottom left/right |
-| 260-4 | TXCJ-H7-2020D-L260-SC-DA | 260mm | 3 | Horizontal cross |
-| 260-5 | TXCJ-H7-2020D-L260-DA | 260mm | 1 | X-axis |
-| 130-1 | TXCJ-H7-2020D-L130-SC-DA-LC-Z5-A40-RC-Z5-A40 | 130mm | 1 | Heatbed (drilled 40mm) |
-| 130-2 | TXCJ-H7-2020D-L130-LA | 130mm | 2 | Heatbed |
+| ID | JLC Model | Spec | Qty | Processing | Notes |
+|----|-----------|------|-----|------------|-------|
+| 300-1 | TXCJ-H7-2020D-L300-SC-DA-LC-Z5-A10-RC-Z5-A60 | 300mm | 2 | Milled face, both-end M5 tap, left M5 hole @10mm, right M5 hole @60mm | Rear pillars |
+| 300-2 | TXCJ-H7-2020D-L300-SC-DA-LC-Z5-A10-RC-Z5-A60-RE-Z5-A60 | 300mm | 2 | Milled face, both-end M5 tap, left M5 hole @10mm, right M5 hole @60mm + vertical M5 hole @60mm | Front pillars |
+| 250 | TXCJ-H7-2020D-L250-DA-LC-Z5-A10-RC-Z5-A10 | 250mm | 2 | Both-end M5 tap, left M5 hole @10mm, right M5 hole @10mm | Z-axis |
+| 260-1 | TXCJ-H7-2020D-L260-DA | 260mm | 2 | Both-end M5 tap | Top left/right |
+| 260-2 | TXCJ-H7-2020D-L260-SC-DA-LC-Z5-A36 | 260mm | 2 | Milled face, both-end M5 tap, left M5 hole @36mm | Middle left/right |
+| 260-3 | TXCJ-H7-2020D-L260-SC-DA-LC-Z5-A36 | 260mm | 2 | Milled face, both-end M5 tap, left M5 hole @36mm | Bottom left/right |
+| 260-4 | TXCJ-H7-2020D-L260-SC-DA | 260mm | 3 | Milled face, both-end M5 tap | Horizontal cross |
+| 260-5 | TXCJ-H7-2020D-L260-DA | 260mm | 1 | Both-end M5 tap | X-axis |
+| 130-1 | TXCJ-H7-2020D-L130-SC-DA-LC-Z5-A40-RC-Z5-A40 | 130mm | 1 | Milled face, both-end M5 tap, left M5 hole @40mm, right M5 hole @40mm | Heatbed |
+| 130-2 | TXCJ-H7-2020D-L130-LA | 130mm | 2 | Left-end M5 tap | Heatbed |
 
 > JLC order file: `BOM/BOM-Frame-JLCFA.xlsx`
 
@@ -32,7 +32,17 @@
 | MGN9 Rail | 200mm | 2 | Y-axis |
 | MGN12 Rail | 200mm | 3 | X-axis x1, Z-axis x2 |
 | MGN9H Carriage | - | 2 | Y-axis |
-| MGN12H Carriage | - | 3 | X-axis x1, Z-axis x2 |
+| MGN12H Carriage | **Extended (加长)** | 3 | X-axis x1, Z-axis x2. Must use extended version for E3D V6 hotend mount |
+
+> **Important**: MGN12H carriages must be the **extended/longer version** (加长滑块). Standard MGN12H will not fit the E3D V6 hotend mount. See XiaoChen DIY README: "修改版已适配加长滑块".
+
+### Rail Assembly Jigs (printed)
+
+| File | Purpose |
+|------|---------|
+| `STLs/rail-jigs/mgn12定位件.STL` | MGN12 rail positioning jig |
+| `STLs/rail-jigs/mgn9定位件.STL` | MGN9 rail positioning jig |
+| `STLs/rail-jigs/导轨滑块防滑脱固定件.stl` | Carriage anti-drop bracket |
 
 ## 3. Hotend & Extruder
 
@@ -68,7 +78,7 @@
 | T8 Lead Screw | 220mm | 1 | |
 | Spider Coupler | OD25 H30 5-to-8 | 1 | Or standard 5-to-8 coupler |
 | T8 Anti-backlash Nut | POM, no flange ridge | 1 | |
-| Custom Aluminum Plate | 150x150x8mm | 1 | |
+| Custom Aluminum Plate | 150x150x8mm | 1 | DXF: `DXFs/heatbed-aluminum-plate-v1.1.DXF`. Countersunk holes depth 2–3.5mm. Source: XiaoChen DIY V1.1 |
 | Magnetic PEI Steel Sheet | 150x150mm | 1 | |
 | Silicone Heater Pad | 220V 110W | 1 | |
 | Solid State Relay | DC-AC | 1 | |
